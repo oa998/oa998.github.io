@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      type="text/javascript"
+      src="https://www.gstatic.com/charts/loader.js"
+    ></script>
+  </head>
+  <body>
+    <div style="display: flex; gap: 10px">
+      <button style="margin-bottom: 20px" onclick="drawChartByReport(true)">
+        By Report
+      </button>
+      <button style="margin-bottom: 20px" onclick="drawChartByReport()">
+        By Report (Only columns that appear more than once)
+      </button>
+    </div>
+    <div style="display: flex; gap: 10px">
+      <button style="margin-bottom: 20px" onclick="drawChartByCategory(true)">
+        By Category
+      </button>
+      <button style="margin-bottom: 20px" onclick="drawChartByCategory()">
+        By Category (Only columns that appear more than once)
+      </button>
+    </div>
+
+    <div id="sankey_basic" style="width: 900px; height: 5000px"></div>
+  </body>
+  <script src="category.js"></script>
+  <script src="report.js"></script>
+  <script>
+    google.charts.load("current", { packages: ["sankey"] });
+    // google.charts.setOnLoadCallback(drawChart);
+  </script>
+</html>
